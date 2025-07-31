@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pausa Italiana</title>
+
+  <!-- Bootstrap CSS y Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <link rel="icon" type="image/png" href="https://e7.pngegg.com/pngimages/825/793/png-clipart-coffee-cafe-cappuccino-decorative-coffee-cup-cafe-coffee-illustration-food-text-thumbnail.png">
+
+  <style>
+    body {
+      background: #fffaf4;
+      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #b03a2e;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    header h1 {
+      font-size: 2.8rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    nav.navbar {
+      background: #f8f4f0;
+      box-shadow: 0 2px 4px rgb(176 58 46 / 0.2);
+      font-weight: 600;
+    }
+    nav.navbar .nav-link {
+      color: #b03a2e;
+      transition: color 0.3s ease;
+    }
+    nav.navbar .nav-link:hover,
+    nav.navbar .nav-link.active {
+      color: #8c1c13;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .section-title {
+      color: #b03a2e;
+      border-bottom: 3px solid #8c1c13;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 1.9rem;
+      text-align: center;
+    }
+
+    /* Estilos para listas del menú */
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul li {
+      padding: 0.3rem 0;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    ul li::before {
+      content: "•";
+      color: #b03a2e;
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Iconos delante de títulos de subsecciones */
+    h4 i {
+      color: #b03a2e;
+      margin-right: 0.4rem;
+    }
+
+    /* Galería */
+    .gallery-item {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(176, 58, 46, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      aspect-ratio: 4 / 3;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px;
+    }
+    .gallery-item:hover {
+      transform: scale(1.07);
+      box-shadow: 0 10px 30px rgba(176, 58, 46, 0.4);
+    }
+
+    /* Footer */
+    footer {
+      background: #f1f1f1;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #555;
+      font-style: italic;
+      letter-spacing: 0.03em;
+    }
+
+    /* Responsive ajustes */
+    @media (max-width: 576px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><i class="bi bi-cup-hot-fill"></i> Pausa Italiana</h1>
+    <p>Bienvenido a Pausa Italiana, donde cada plato cuenta una historia de tradición y pasión culinaria. ¡Sumérgete en una experiencia gastronómica única!</p>
+  </header>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent"
+        aria-controls="navbarContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+        <ul class="navbar-nav gap-3 fs-6">
+          <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#concepto">Concepto</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Historia -->
+  <section id="historia">
+    <h2 class="section-title">Nuestra historia</h2>
+    <p>En un mundo donde los relojes corren más rápido que los pensamientos y las agendas están siempre llenas, nació Pausa Italiana con una idea muy clara: ofrecer un momento de calidad en medio del caos cotidiano.</p>
+    <p>La inspiración vino de la vida italiana, donde incluso en días ajetreados, las personas se permiten una pausa para disfrutar del buen café, un bocado sabroso y una conversación agradable. Pausa Italiana surge como un refugio para todos aquellos profesionales y trabajadores que, aunque tienen poco tiempo, no quieren renunciar a un desayuno delicioso, reconfortante y auténtico.</p>
+    <p>Sabíamos que la rutina laboral muchas veces deja de lado el placer de comer bien. Por eso, creamos un menú ágil pero lleno de sabor, con ingredientes frescos, recetas italianas tradicionales y un servicio rápido pero cálido. Desde un cappuccino espumoso hasta una focaccia recién horneada o una tarta salada, cada plato está diseñado para brindar un respiro sin sacrificar el ritmo.</p>
+    <p><strong>Pausa Italiana no es solo un restaurante, es un concepto:</strong><br>Una pausa real.<br>Un momento solo para ti.<br>Un pedacito de Italia en medio de tu jornada.</p>
+    <p>Porque creemos que incluso cinco minutos bien vividos pueden cambiar el resto de tu día.</p>
+  </section>
+
+  <!-- Concepto -->
+  <section id="concepto">
+    <h2 class="section-title">Concepto creativo</h2>
+    <p><strong>«Tu pausa sí importa»</strong></p>
+    <p>Porque no importa cuán ocupado estés, mereces algo más que un café apurado y un pan sin alma.</p>
+    <ul>
+      <li><strong>MERECES</strong> una pausa que sepa a Italia.</li>
+      <li><strong>MERECES</strong> sabor, atención y un momento para ti.</li>
+      <li><strong>Objetivo:</strong> Presentar a Pausa Italiana como una nueva opción para desayunar o tomar café rápidamente sin sacrificar sabor ni experiencia, posicionándola como la mejor forma de empezar tu día laboral.</li>
+      <li><strong>Paleta de colores:</strong> Elegancia y sobriedad ejecutiva, calidez italiana, toques gourmet y artesanales.</li>
+    </ul>
+  </section>
+
+<section id="menu" class="container">
+  <h2 class="section-title">Menú Bebidas</h2>
+  
+  <div class="row g-4">
+    <div class="col-12 col-md-4">
+      <div class="card shadow-sm h-100 border-0" style="background:#f9f3ef;">
+        <div class="card-body">
+          <h4 class="card-title text-danger mb-3">
+            <i class="bi bi-water"></i> Frías
+          </h4>
+          <ul class="list-unstyled mb-0">
+            <li>Acqua frizzante o naturale (Agua mineral con o sin gas)</li>
+            <li>Limonata artigianale (Limonada casera con hierbabuena o jengibre)</li>
+            <li>Té frío al limón o durazno</li>
+            <li>Crodino o Sanbittèr (aperitivos sin alcohol, clásicos en Italia)</li>
+            <li>Spritz analcolico (versión sin alcohol del famoso aperitivo)</li>
+            <li>Zumo de naranja o toronja natural</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="card shadow-sm h-100 border-0" style="background:#f9f3ef;">
+        <div class="card-body">
+          <h4 class="card-title text-danger mb-3">
+            <i class="bi bi-cup-hot"></i> Calientes
+          </h4>
+          <ul class="list-unstyled mb-0">
+            <li>Espresso</li>
+            <li>Macchiato (espresso con un toque de leche espumada)</li>
+            <li>Cappuccino (solo en la mañana, según costumbre italiana)</li>
+            <li>Café lungo (más suave, más agua que el espresso)</li>
+            <li>Infusiones herbales (manzanilla, menta, limón)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="card shadow-sm h-100 border-0" style="background:#f9f3ef;">
+        <div class="card-body">
+          <h4 class="card-title text-danger mb-3">
+            <i class="bi bi-glass"></i> Con alcohol
+          </h4>
+          <ul class="list-unstyled mb-0">
+            <li>Spritz Aperol o Campari</li>
+            <li>Prosecco (vino espumoso suave)</li>
+            <li>Vino blanco o tinto ligero</li>
+            <li>Birra italiana (cerveza artesanal o clásica como Peroni o Moretti)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title mt-5">Antipasti, Bruschetta, Ensaladas y Paninos</h2>
+
+  <div class="row g-4">
+    <div class="col-12 col-md-6">
+      <div class="card shadow-sm h-100 border-0" style="background:#fff6f4;">
+        <div class="card-body">
+          <h5 class="text-danger mb-3">
+            <i class="bi bi-egg-fried"></i> Antipasti
+          </h5>
+          <ul class="list-unstyled mb-0">
+            <li>Orden de papas fritas en gajo</li>
+            <li>Orden de calabacines y champiñones</li>
+            <li>Mini tostadas Ricotta y Muffaletta</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <div class="card shadow-sm h-100 border-0" style="background:#fff6f4;">
+        <div class="card-body">
+          <h5 class="text-danger mb-3">
+            <i class="bi bi-bag-fill"></i> Bruschetta
+          </h5>
+          <ul class="list-unstyled mb-0">
+            <li>Portobello 1 pza.</li>
+            <li>Serrano 1 pza.</li>
+            <li>Salmón 1 pza.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <div class="card shadow-sm h-100 border-0" style="background:#fff6f4;">
+        <div class="card-body">
+          <h5 class="text-danger mb-3">
+            <i class="bi bi-emoji-heart-eyes"></i> Ensaladas
+          </h5>
+          <ul class="list-unstyled mb-0">
+            <li>Del día</li>
+            <li>César con pollo</li>
+            <li>Griega</li>
+            <li>Arándanos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <div class="card shadow-sm h-100 border-0" style="background:#fff6f4;">
+        <div class="card-body">
+          <h5 class="text-danger mb-3">
+            <i class="bi bi-sandwich"></i> Paninos
+          </h5>
+          <ul class="list-unstyled mb-0">
+            <li>Di rigore</li>
+            <li>Guisto</li>
+            <li>Capriccio</li>
+            <li>Il forte</li>
+            <li>Provolone</li>
+            <li>Tropicale</li>
+            <li>Di carne</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="mt-4 fs-5 fw-semibold">
+    <strong>Elige tu pan:</strong> Ajo / Multigrano / Chipotle / Chapata / Baguette / Artesanal
+  </p>
+</section>
+
+  <!-- Galería -->
+  <section id="galeria" class="container py-5">
+    <h2 class="text-center mb-4 display-6 fw-bold text-uppercase text-secondary">Galería Visual</h2>
+    <div class="row g-4">
+      <div class="col-6 col-md-3">
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/12900917/pexels-photo-12900917.jpeg" alt="Café y panino" />
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Capuccino" />
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/2396220/pexels-photo-2396220.jpeg" alt="Café espresso" />
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/5836433/pexels-photo-5836433.jpeg" alt="Café y tarta" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ubicación -->
+  <section id="ubicacion" class="container">
+    <h2 class="section-title">Ubicación & Horario</h2>
+    <p><i class="bi bi-geo-alt"></i> Av. Mariano Jiménez no. 1000 Frac. Peña, La Piedad, Michoacán</p>
+    <p><i class="bi bi-telephone"></i> Tel: 352 557 70 97</p>
+    <p><i class="bi bi-clock"></i> Solo para llevar de 9:00 AM a 3:30 PM</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>«Tu pausa sí importa»</strong> — mereces sabor, atención y un momento para ti.</p>
+    <p>&copy; 2025 Pausa Italiana</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
